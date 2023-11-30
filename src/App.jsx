@@ -3,7 +3,7 @@ import "./App.css";
 
 function App() {
   const API = "https://api.adviceslip.com/advice";
-  const [advice, setAdvice] = useState("");
+  const [advice, setAdvice] = useState("Never give up nigga");
 
   const getAdvice = async () => {
     try {
