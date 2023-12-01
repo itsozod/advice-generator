@@ -3,8 +3,22 @@ import "./App.css";
 
 function App() {
   const API = "https://api.adviceslip.com/advice";
-  const [advice, setAdvice] = useState("Never give up!");
-  const [id, setId] = useState(0);
+  const initialAdvice = "https://api.adviceslip.com/advice/127";
+  const [advice, setAdvice] = useState(initialAdvice);
+  const [id, setId] = useState(127);
+
+  window.onload = () => {
+    (async () => {
+      try {
+        const response = await fetch(initialAdvice);
+        const data = await response.json();
+        setAdvice(data.slip.advice);
+        console.log(data.slip.advice);
+      } catch (e) {
+        console.error(e.message);
+      }
+    })();
+  };
 
   const getAdvice = async () => {
     try {
