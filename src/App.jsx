@@ -24,12 +24,12 @@ function App() {
         <p className="advice">{advice}</p>
         <img
           className="pattern"
-          src="pattern-divider-mobile.svg"
+          src="pattern-divider-desktop.svg"
           alt="Pattern divider"
         />
-        <div className="dice-container">
-          <img className="dice-icon" src="icon-dice.svg" alt="Icon Dice" />
-        </div>
+      </div>
+      <div className="dice-container" onClick={() => getAdvice()}>
+        <img className="dice-icon" src="icon-dice.svg" alt="Icon Dice" />
       </div>
     </div>
   );

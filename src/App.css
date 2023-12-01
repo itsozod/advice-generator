@@ -4,29 +4,29 @@
   padding: 2rem;
   text-align: center;
 }
-*,
-*::before,
-*::after {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
 body {
   background-color: hsl(218, 23%, 16%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 .mainContainer {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   background-color: hsl(217, 19%, 24%);
   padding: 10px;
   margin: 10px;
-  max-width: 400px;
+  border-radius: 12px;
+  max-width: 300px;
+  z-index: 0;
 }
 .adviceId {
   color: hsl(150, 100%, 66%);
@@ -34,20 +34,28 @@ body {
 .advice {
   color: #fff;
   margin: 10px;
+  font-weight: bold;
 }
 .pattern {
-  margin: 10px;
-  max-width: 500px;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
 }
 .dice-container {
-  position: absolute;
-  transform: translateY(60px);
+  display: flex;
+  justify-content: center;
   background-color: black;
   padding: 10px;
-  border-radius: 12px;
+  margin: 10px;
+  border-radius: 50%;
   cursor: pointer;
+  z-index: 1;
+  margin-top: -30px;
+  transition: 0.4s ease-in;
+}
+.dice-container:hover {
+  background-color: hsl(150, 100%, 66%);
 }
 .dice-icon {
-  width: 30px;
-  height: auto;
+  width: 20px;
 }
