@@ -4,3 +4,50 @@
   padding: 2rem;
   text-align: center;
 }
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: hsl(218, 23%, 16%);
+}
+.mainContainer {
+  display: flex;
+  justify-content: center;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(217, 19%, 24%);
+  padding: 10px;
+  margin: 10px;
+  max-width: 400px;
+}
+.adviceId {
+  color: hsl(150, 100%, 66%);
+}
+.advice {
+  color: #fff;
+  margin: 10px;
+}
+.pattern {
+  margin: 10px;
+  max-width: 500px;
+}
+.dice-container {
+  position: absolute;
+  transform: translateY(60px);
+  background-color: black;
+  padding: 10px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.dice-icon {
+  width: 30px;
+  height: auto;
+}
