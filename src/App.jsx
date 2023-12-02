@@ -3,15 +3,16 @@ import "./App.css";
 
 function App() {
   const API = "https://api.adviceslip.com/advice";
-  const initialAdvice = "https://api.adviceslip.com/advice/127";
-  const [advice, setAdvice] = useState(initialAdvice);
-  const [id, setId] = useState(127);
+  const initialAdvice = "https://api.adviceslip.com/advice/117";
+  const [advice, setAdvice] = useState("");
+  const [id, setId] = useState();
 
   window.onload = () => {
     (async () => {
       try {
         const response = await fetch(initialAdvice);
         const data = await response.json();
+        setId(data.slip.id);
         setAdvice(data.slip.advice);
         console.log(data.slip.advice);
       } catch (e) {
